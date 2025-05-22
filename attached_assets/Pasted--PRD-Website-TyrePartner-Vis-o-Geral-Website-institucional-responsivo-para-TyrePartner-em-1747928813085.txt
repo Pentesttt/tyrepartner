@@ -1,0 +1,76 @@
+# PRD - Website TyrePartner
+
+## Visão Geral
+Website institucional responsivo para TyrePartner, empresa de venda de pneus, com busca interativa de pneus por referência, seções institucionais e contato.
+
+## Objetivos
+- Consulta rápida de pneus por referência
+- Contato facilitado via WhatsApp
+- Apresentação clara da empresa: Missão, Visão e Valores
+- Navegação SPA (tudo numa página)
+- Responsivo e moderno
+- Fácil edição de textos e CSV
+
+## Seções
+### Header
+- Logo TyrePartner (texto editável)
+- Menu: Home | About | Contact (links alternam seções na mesma página)
+
+### Home
+- Campo de busca por referência de pneu
+- Lista resultados com Marca, Referência, Stock, Preço Cliente Final (MZN)
+- Botão “Falar no WhatsApp” com mensagem pré-formatada
+
+### About
+- Missão
+- Visão
+- Valores  
+(Textos editáveis)
+
+### Contact
+- Formulário simples: Nome, Email, Mensagem
+- Botão Enviar limpa formulário
+- Dados fixos de contato (telefone, email, endereço)
+
+## Dados de Produtos (CSV)
+- Arquivo `pneus.csv` com colunas: Marca,Referencia,Stock,PrecoClienteFinal
+- Atualização via substituição do CSV
+- Leitura via PapaParse.js no frontend
+
+## Tecnologia
+- HTML5, CSS3, JavaScript puro
+- PapaParse.js para CSV
+- Layout responsivo com Flexbox/Grid
+- SPA sem recarregamento
+
+## Branding e Visual
+- Cores: Vermelho (#D32F2F), Branco (#FFF), Preto (textos)
+- Tipografia sans-serif moderna
+- Layout clean e espaçado
+
+## Fluxo de Usuário
+- Busca pneus → resultados dinâmicos
+- Botão WhatsApp abre conversa
+- Navegação entre seções sem reload
+- Formulário contato limpa ao enviar
+- Adaptado para mobile (menu hamburger)
+
+## Testes Esperados
+| Cenário                | Resultado Esperado                                   |
+|------------------------|-----------------------------------------------------|
+| Busca referência válida | Exibe pneus correspondentes                          |
+| Busca sem resultados    | Exibe “Nenhum pneu encontrado”                      |
+| Clicar WhatsApp        | Abre WhatsApp com mensagem do pneu                   |
+| Navegar seções          | Troca conteúdo sem reload, menu destaca seção ativa |
+| Enviar contato          | Limpa formulário                                    |
+| Acessar em mobile       | Layout e menu funcionam corretamente                 |
+
+---
+
+## Instruções para edição
+- Atualizar textos (Missão, Visão, Valores, contatos) diretamente no HTML/JS
+- Atualizar dados dos pneus substituindo o arquivo pneus.csv
+
+---
+
+# Fim do PRD

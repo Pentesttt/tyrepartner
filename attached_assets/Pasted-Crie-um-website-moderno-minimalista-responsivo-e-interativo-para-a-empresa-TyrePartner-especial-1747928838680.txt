@@ -1,0 +1,60 @@
+Crie um website moderno, minimalista, responsivo e interativo para a empresa "TyrePartner", especializada na venda de pneus. O site deve ser uma página única (SPA) contendo as seguintes funcionalidades:
+
+1. Layout e Branding:
+- Cores predominantes: vermelho (#D32F2F), branco (#FFFFFF), preto para textos.
+- Logotipo no topo como texto "TyrePartner" em fonte moderna e negrito vermelho.
+- Navegação horizontal fixa com os links: Home, About, Contact.
+- O clique nos links troca o conteúdo da seção correspondente sem recarregar a página.
+- Layout responsivo, incluindo menu "hamburger" em telas pequenas.
+
+2. Seções do site:
+- Home:
+  - Campo input para digitar a referência do pneu (exemplo: "185/60R14").
+  - Botão "Buscar" para filtrar pneus pelo termo digitado, fazendo busca case insensitive e substring.
+  - Mostrar resultados numa tabela/lista com colunas: Marca, Referência, Stock (ex: "20 unidades"), Preço Cliente Final (ex: "2.460 MZN").
+  - Cada resultado deve ter um botão "Falar no WhatsApp" que abre WhatsApp com mensagem:  
+    "Olá! Gostaria de saber mais sobre o pneu [REFERÊNCIA] que vi no site."
+  - Se não houver resultados, mostrar mensagem "Nenhum pneu encontrado".
+
+- About:
+  - Exibir textos da Missão, Visão e Valores da empresa.  
+  - Esses textos devem estar facilmente editáveis no código.
+
+- Contact:
+  - Formulário com campos: Nome, Email, Mensagem e botão Enviar.
+  - O botão Enviar deve limpar os campos do formulário (sem envio real).
+  - Abaixo do formulário, exibir dados fixos de contato (telefone, email, endereço).
+
+3. Dados:
+- Usar arquivo CSV chamado `pneus.csv` com colunas: Marca,Referencia,Stock,PrecoClienteFinal.
+- Carregar e ler o CSV no frontend usando PapaParse.js.
+- A busca deve filtrar os pneus conforme o texto digitado, lendo os dados do CSV carregado.
+- Atualizar dados apenas trocando o arquivo CSV (sem mudar o código).
+
+4. Tecnologias:
+- HTML5, CSS3, JavaScript puro (sem frameworks além do PapaParse).
+- Layout responsivo usando Flexbox/Grid.
+- SPA (single page application) para alternar seções sem recarregar a página.
+
+5. Interatividade:
+- Menu responsivo com modo "hamburger" em telas pequenas.
+- Destaque visual na seção ativa do menu.
+- Botões com efeitos hover.
+- Mensagens de erro/resultado claro para o usuário.
+
+6. Comentários:
+- Código HTML, CSS e JS com comentários claros para facilitar futuras edições.
+- Textos institucionais, dados do CSV e contatos facilmente alteráveis.
+
+7. Entregáveis:
+- `index.html` com toda estrutura.
+- `styles.css` com os estilos.
+- `script.js` com toda a lógica (busca, navegação, WhatsApp).
+- `pneus.csv` de exemplo.
+- Funcionalidade pronta para deploy em Replit com link público.
+
+Faça tudo isso de forma clean, moderna, intuitiva e profissional, garantindo ótima experiência em desktop e mobile.
+
+---
+
+Aguardo o código completo para iniciar o projeto.
