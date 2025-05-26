@@ -12,8 +12,9 @@ export default function TireCard({ tire }: TireCardProps) {
   const hasStock = stockNumber > 0;
 
   const formatPrice = (price: string) => {
-    const numPrice = parseFloat(price) || 0;
-    return numPrice.toLocaleString("pt-MZ");
+    // Convert to number and multiply by 1000 to get the real price
+    const numPrice = (parseFloat(price) * 1000) || 0;
+    return numPrice.toLocaleString("pt-MZ", { maximumFractionDigits: 0 });
   };
 
   const openWhatsApp = () => {
