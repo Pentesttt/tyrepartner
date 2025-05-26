@@ -1,6 +1,6 @@
 import { Menu, X } from "lucide-react";
 
-type Section = "home" | "about" | "contact";
+type Section = "home";
 
 interface NavigationProps {
   activeSection: Section;
@@ -17,8 +17,6 @@ export default function Navigation({
 }: NavigationProps) {
   const navItems = [
     { id: "home" as Section, label: "Home" },
-    { id: "about" as Section, label: "About" },
-    { id: "contact" as Section, label: "Contact" },
   ];
 
   return (

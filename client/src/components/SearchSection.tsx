@@ -3,7 +3,10 @@ import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import TireCard from "@/components/TireCard";
-import { loadTiresData, type Tire } from "@/lib/csvParser";
+import { loadTiresFromFile, type Tire } from "@/lib/csvParser";
+
+
+
 
 export default function SearchSection() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -15,8 +18,7 @@ export default function SearchSection() {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const data = await loadTiresData();
-        setTiresData(data);
+        const data = await loadTiresFromFile();
       } catch (error) {
         console.error("Error loading tires data:", error);
       } finally {
@@ -105,7 +107,8 @@ export default function SearchSection() {
         ) : (
           <div className="text-center py-12">
             <p className="text-lg text-gray-600">
-              Digite uma referência para buscar pneus
+              Verifique a referencia do seu pneu no LIVRETE DA VIATURA e insira acima!
+        
             </p>
           </div>
         )}

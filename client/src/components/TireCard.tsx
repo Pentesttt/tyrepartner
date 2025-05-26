@@ -18,7 +18,7 @@ export default function TireCard({ tire }: TireCardProps) {
 
   const openWhatsApp = () => {
     const message = `Olá! Gostaria de saber mais sobre o pneu ${tire.Referencia} que vi no site.`;
-    const whatsappURL = `https://wa.me/258841234567?text=${encodeURIComponent(message)}`;
+    const whatsappURL = `https://wa.me/258877784159?text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, "_blank");
   };
 
