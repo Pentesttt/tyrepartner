@@ -3,7 +3,7 @@ import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import TireCard from "@/components/TireCard";
-import { loadTiresFromFile, type Tire } from "@/lib/csvParser";
+import { loadTiresData, type Tire } from "@/lib/csvParser";
 
 
 
@@ -18,7 +18,8 @@ export default function SearchSection() {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const data = await loadTiresFromFile();
+        const data = await loadTiresData();
+        setTiresData(data);
       } catch (error) {
         console.error("Error loading tires data:", error);
       } finally {
