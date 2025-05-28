@@ -2,6 +2,10 @@ import { Warehouse } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { type Tire } from "@/lib/csvParser";
 
+
+// @ts-ignore
+declare const fbq: (...args: any[]) => void;
+
 interface TireCardProps {
   tire: Tire;
 }
@@ -20,6 +24,17 @@ export default function TireCard({ tire }: TireCardProps) {
   const openWhatsApp = () => {
     const message = `Olá! Gostaria de saber mais sobre o pneu ${tire.Referencia} que vi no site.`;
     const whatsappURL = `https://wa.me/258877784159?text=${encodeURIComponent(message)}`;
+    
+      // Enviar evento para o Pixel do Facebook
+    if (typeof fbq !== "undefined") {
+      fbq("track", "Contact", {
+        content_name: tire.Referencia,
+        content_category: "Pneu",
+        value: parseFloat(tire.PrecoClienteFinal) * 1000,
+        currency: "MZN"
+      });
+    }
+    
     window.open(whatsappURL, "_blank");
   };
 
